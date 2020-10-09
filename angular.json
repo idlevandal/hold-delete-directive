@@ -145,6 +145,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hold-to-delete"
+    }
+  },
+  "defaultProject": "hold-to-delete",
+  "cli": {
+    "analytics": false
+  }
 }

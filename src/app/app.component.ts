@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hold-to-delete';
+  
+  public progress: number = 0;
+
+  public holdHandler(ev: number) {
+    console.log(ev);
+    this.progress = ev / 10;
+    if (ev === 1000) {
+      console.log('deleted');
+      
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  public progress: number = 0;
+
+  @ViewChild('frog') private frog: ElementRef;
+  public progressVal: number = 0;
 
   public holdHandler(ev: number) {
     console.log(ev);
-    this.progress = ev / 10;
-    if (ev === 1000) {
+    this.progressVal = ev / 10;
+    if (this.progressVal > 100) {
       console.log('deleted');
-      
+      this.frog.nativeElement.remove();
     }
   }
 }

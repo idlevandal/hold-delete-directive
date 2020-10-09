@@ -1,11 +1,14 @@
 <div class="container mt-5">
   <h4>Hold to delete</h4>
 
-  <!-- <progress [value]="progress" max="100"></progress> -->
-  <div class="col-6">
+  <button class="btn btn-primary mb-2" holdable (holdTime)="holdHandler($event)">Button</button>
+  <progress [value]="progressVal" max="100"></progress>
+  <!-- <div class="col-6">
     <button class="btn btn-primary mb-2" holdable (holdTime)="holdHandler($event)">Button</button>
     <div class="progress">
-      <div [style.width]="progress + '%'" max="100" class="progress-bar"></div>
+      <div [style.width]="progressVal + '%'" class="progress-bar"></div>
     </div>
-  </div>
+  </div> -->
+
+  <h1 #frog>🐸</h1>
 </div>

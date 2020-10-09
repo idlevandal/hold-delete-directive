@@ -13,7 +13,7 @@ export class HoldableDirective implements OnInit {
 
   // how long user can hold the button
   @Output() holdTime: EventEmitter<number> = new EventEmitter();
-  // in DOM, <button holdable (holdTime="")></button>
+  // in DOM, <button holdable (holdTime)="function($event)"></button>
 
   state: Subject<string> = new Subject();
 
